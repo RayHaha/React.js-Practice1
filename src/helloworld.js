@@ -11,5 +11,5 @@ const App = () => {     // this is an arrow function in ES6
 
 // then we are going to find a place for the App
 // document.querySelector('#root') will go and find the <div id="root"></div> in index.html
-ReacrDOM.render(<App />, document.querySelector('#root'));
+ReacrtDOM.render(<App />, document.querySelector('#root'));
 
