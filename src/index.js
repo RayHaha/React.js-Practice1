@@ -1,56 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import faker
-import faker from 'faker';
+// import the CommentDetail.js
+import CommentDetail from './CommentDetail';
 
 const App = () => {
     return (
         <div className="ui container comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                    {/* use faker library to generate a fake image */}
-                    <img alt="avatar" src={faker.image.avatar()}/>
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 6:00PM</span>
-                    </div>
-                    <div className="text">Nice blog post!</div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                    {/* use faker library to generate a fake image */}
-                    <img alt="avatar" src={faker.image.avatar()}/>
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 6:00PM</span>
-                    </div>
-                    <div className="text">Nice blog post!</div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                    {/* use faker library to generate a fake image */}
-                    <img alt="avatar" src={faker.image.avatar()}/>
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 6:00PM</span>
-                    </div>
-                    <div className="text">Nice blog post!</div>
-                </div>
-            </div>
+            {/* then use the CommentDetail component with properties */}
+            <CommentDetail author="Sam" />
+            <CommentDetail author="Alex" />
+            <CommentDetail author="Jane" />
         </div>
     );
 } 
