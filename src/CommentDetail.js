@@ -1,23 +1,24 @@
 import React from 'react';
-import faker from 'faker';
 
-//  the prop is going to show up in the parameter as an object
+//  the props is going to show up in the parameter as an object
 const CommentDetail = (props) => {
     return (
         <div className="comment">
             <a href="/" className="avatar">
-                {/* use faker library to generate a fake image */}
-                <img alt="avatar" src={faker.image.avatar()}/>
+                {/* use faker library in index.js then past to here */}
+                <img alt="avatar" src={props.fakeImage}/>
             </a>
             <div className="content">
                 <a href="/" className="author">
-                    {/* then we refer to the props.author object here */}
+                    {/* then we refer to the props.author here */}
                     {props.author}
                 </a>
                 <div className="metadata">
-                    <span className="date">Today at 6:00PM</span>
+                    {/* we refer to the props.timeAgo here */}
+                    <span className="date">{props.timeAgo}</span>
                 </div>
-                <div className="text">Nice blog post!</div>
+                {/* we refer to the props.textToPost here */}
+                <div className="text">{props.textToPost}</div>
             </div>
         </div>
     );
